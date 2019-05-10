@@ -22,12 +22,71 @@
 .App-link {
   color: #61dafb;
 }
+#raindrop1, #raindrop4, #raindrop7, #raindrop10, #raindrop13 {
+  animation: dissapear infinite 0.5s linear;
+}
+#raindrop2, #raindrop5, #raindrop8, #raindrop11, #raindrop14 {
+  animation: dissapear infinite 1s linear;
+  animation-delay: 0.5s;
+}
+#raindrop3, #raindrop6 , #raindrop9, #raindrop12, #raindrop15 {
+  animation: dissapear infinite 1s linear;
+  animation-delay: 2s;
+}
+
+#spider {
+  animation: spider infinite 3s linear;
+
+}
+
+#spikes {
+  animation: App-logo-spin infinite 25s linear;
+
+}
+@keyframes spider {
+  0% {
+    transform: rotateZ(0deg);
+
+  } 
+  25% {
+    transform: rotateZ(30deg);
+  }
+  50% {
+    transform: rotateZ(0deg);
+
+  }
+  75% {
+    transform: rotateZ(-30deg);
+  }
+  100% {
+    transform:rotateZ(0deg);
+  }
+  
+}
+
+
+@keyframes dissapear {
+  0% {
+    opacity: 0;
+
+  }
+  100% {
+    opacity: 1;
+
+  }
+  
+}
+
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  0% {
+    transform: rotateZ(0deg);
+    transform-origin: center;
+
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: rotateZ(360deg);
+    transform-origin: center;
+
   }
 }
